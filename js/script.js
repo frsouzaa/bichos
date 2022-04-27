@@ -2,14 +2,11 @@ const baseURL = 'https://thatcopy.pw/catapi/rest/';
 const catBtn = document.getElementById('change-cat');
 
 const getCats = async () => {
-    try {
-        const data = await fetch(baseURL);
-        const json = await data.json()
+    const data = await fetch(baseURL)
+        .then(res => res.json())
+        .catch(e => console.log(e))
 
-        return json.webpurl;
-    } catch (e) {
-        console.log(e.message);
-    }
+    return data.webpurl;
 };
 
 const loadImg = async () => {
