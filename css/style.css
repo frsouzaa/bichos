@@ -1,9 +1,12 @@
 * {
     margin: 0;
     padding: 0;
-    background-color: #141414;
-    color: aliceblue;
+    color: #141414;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #141414;
 }
 
 .img {
@@ -22,12 +25,16 @@
 }
 
 .main h1, .main button {
-    margin: 5% 0;
+    margin: 3% 0;
 }
 
-.main button {
+.main h1 {
+    color: #f0f8ff;
+}
+
+.main #change-cat {
     border: none;
-    background-color: rgb(114, 21, 219);
+    background-color: #f0f8ff;
     padding: 10px;
     border-radius: 10px;
     font-size: 22px;
@@ -35,4 +42,38 @@
 
 .main button:hover{
     cursor: pointer;
+}
+
+.buttons {
+    margin-top: 10vh;
+}
+
+.buttons button {
+    padding: 13px;
+    border-radius: 12px;
+    border: none;
+}
+
+.btn1 {
+    background-color: #1A5276;
+}
+
+.btn2 {
+    background-color: #7215db;
+}
+
+.btn3 {
+    background-color: #196F3D;
+}
+
+.btn4 {
+    background-color: #B03A2E;
+}
+
+.btn5 {
+    background-color: #141414;
+}
+
+.btn6 {
+    background-color: #f0f8ff;
 }
