@@ -22,54 +22,44 @@ const loadImg = async () => {
     catImg.src = await getCats();
 };
 
-const changeColor1 = async () => {
-    body.style.backgroundColor = "#1A5276";
-    catBtn.style.backgroundColor = "#f0f8ff";
-    catBtn.style.color = "#1A5276";
-    h1.style.color = "#f0f8ff";
-};
-
-const changeColor2 = async () => {
-    body.style.backgroundColor = "#7215db";
-    catBtn.style.backgroundColor = "#f0f8ff";
-    catBtn.style.color = "#7215db";
-    h1.style.color = "#f0f8ff";
-};
-
-const changeColor3 = async () => {
-    body.style.backgroundColor = "#196F3D";
-    catBtn.style.backgroundColor = "#f0f8ff";
-    catBtn.style.color = "#196F3D";
-    h1.style.color = "#f0f8ff";
-};
-
-const changeColor4 = async () => {
-    body.style.backgroundColor = "#B03A2E";
-    catBtn.style.backgroundColor = "#f0f8ff";
-    catBtn.style.color = "#B03A2E";
-    h1.style.color = "#f0f8ff";
-};
-
-const changeColor5 = async () => {
-    body.style.backgroundColor = "#141414";
-    catBtn.style.backgroundColor = "#f0f8ff";
-    catBtn.style.color = "#141414";
-    h1.style.color = "#f0f8ff";
-};
-
-const changeColor6 = async () => {
-    body.style.backgroundColor = "#f0f8ff";
-    catBtn.style.backgroundColor = "#141414";
-    catBtn.style.color = "#f0f8ff";
-    h1.style.color = "#141414";
-};
+function changeColor (color) {
+    let colors = new Array(4);
+    switch (color) {
+        case 1:
+            colors = ["#1A5276", "#f0f8ff"];
+            break;
+        case 2:
+            colors = ["#7215db", "#f0f8ff"];
+            break;
+        case 3:
+            colors = ["#196F3D", "#f0f8ff"];
+            break;
+        case 4:
+            colors = ["#B03A2E", "#f0f8ff"];
+            break;
+        case 5:
+            colors = ["#141414", "#f0f8ff"];
+            break;
+        case 6:
+            colors = ["#f0f8ff", "#141414"];
+            break;
+        default:
+            colors = ["#141414", "#f0f8ff"];
+            break;                                   
+    }
+    
+    body.style.backgroundColor = colors[0];
+    catBtn.style.backgroundColor = colors[1];
+    catBtn.style.color = colors[0];
+    h1.style.color = colors[1];
+}
 
 catBtn.addEventListener('click', loadImg);
-color1.addEventListener('click', changeColor1);
-color2.addEventListener('click', changeColor2);
-color3.addEventListener('click', changeColor3);
-color4.addEventListener('click', changeColor4);
-color5.addEventListener('click', changeColor5);
-color6.addEventListener('click', changeColor6);
+color1.addEventListener('click', () => changeColor(1));
+color2.addEventListener('click', () => changeColor(2));
+color3.addEventListener('click', () => changeColor(3));
+color4.addEventListener('click', () => changeColor(4));
+color5.addEventListener('click', () => changeColor(5));
+color6.addEventListener('click', () => changeColor(6));
 
 loadImg();

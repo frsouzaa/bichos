@@ -5,35 +5,67 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" type="imagex/png" href="img/icon.ico">
     <title>Gatos</title>
 </head>
 
 <body id="body">
     <main>
         <div class="main">
-            <h1 class="main-title">
-                Gatos
-            </h1>
-            
-            <div class="img">
-                <img id="cat">
+            <div class="main-content">
+                <h1 class="main-title">
+                    Gatos
+                </h1>
+                
+                <div class="img">
+                    <img id="cat">
+                </div>
             </div>
-            
-            <button id="change-cat">
-                Mudar o gato
-            </button>
-            
+
             <div class="buttons">
-                <button class="btn1"></button>
-                <button class="btn2"></button>
-                <button class="btn3"></button>
-                <button class="btn4"></button>
-                <button class="btn5"></button>
-                <button class="btn6"></button>
+                <button id="change-cat">
+                    Mudar o gato
+                </button>
+                <div class="color-buttons">
+                    <button class="btn1"></button>
+                    <button class="btn2"></button>
+                    <button class="btn3"></button>
+                    <button class="btn4"></button>
+                    <button class="btn5"></button>
+                    <button class="btn6"></button>
+                </div>
             </div>
         </div>
     </main>
     
+
+    <footer>
+        <div class="footer">
+            <h2>Desenvolvido por Felipe Ribeiro de Souza, 2022.</h2>
+            <div class="links">
+                <a href="https://github.com/felipeRibeiroDeSouza" target="_blank">
+                    <i class="fa-brands fa-github-alt"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/felipe-ribeiro-de-souza-953871211/" target="_blank">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const name = prompt("Digite seu nome:");
+        if (!(name === null || name === "")) {
+            const h1 = document.getElementsByClassName("main-title")[0];
+            if (name === "Isabella Ferreira Guerra") {
+                h1.innerHTML += `para uma gatinha S2`;
+            } else {
+                h1.innerHTML += `para ${name} S2`;
+            }
+        }
+    </script>
+
+    <script src="https://kit.fontawesome.com/07a4cfc957.js" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
