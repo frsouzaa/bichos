@@ -6,8 +6,8 @@
 }
 
 body {
-    background-color: #141414;
-    color: #141414;
+    background-color: #0F0F0F;
+    color: #0F0F0F;
 }
 
 .img {
@@ -51,7 +51,7 @@ main {
 
 .main h1 {
     font-size: 3vh;
-    color: #f0f8ff;
+    color: #ffead1;
     text-align: center;
 }
 
@@ -63,7 +63,7 @@ main {
 
 .buttons #change-cat {
     border: none;
-    background-color: #f0f8ff;
+    background-color: #ffead1;
     padding: 1vh;
     border-radius: 10px;
     font-size: 2.5vh;
@@ -89,27 +89,27 @@ main {
 }
 
 .btn1 {
-    background-color: #1A5276;
+    background-color: #64B7CC;
 }
 
 .btn2 {
-    background-color: #7215db;
+    background-color: #5902EC;
 }
 
 .btn3 {
-    background-color: #196F3D;
+    background-color: #159052;
 }
 
 .btn4 {
-    background-color: #B03A2E;
+    background-color: #C0322E;
 }
 
 .btn5 {
-    background-color: #141414;
+    background-color: #0F0F0F;
 }
 
 .btn6 {
-    background-color: #f0f8ff;
+    background-color: #ffffe8ee;
 }
 
 footer {

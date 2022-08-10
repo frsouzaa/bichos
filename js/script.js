@@ -1,4 +1,4 @@
-const baseURL = 'https://thatcopy.pw/catapi/rest/';
+const baseURL = 'https://randomfox.ca/floof';
 const catBtn = document.getElementById('change-cat');
 const body = document.getElementById('body');
 const h1 = document.getElementsByClassName('main-title')[0];
@@ -14,7 +14,7 @@ const getCats = async () => {
         .then(res => res.json())
         .catch(e => console.log(e))
 
-    return data.webpurl;
+    return data.image;
 };
 
 const loadImg = async () => {
@@ -26,25 +26,25 @@ function changeColor (color) {
     let colors = new Array(4);
     switch (color) {
         case 1:
-            colors = ["#1A5276", "#f0f8ff"];
+            colors = ["#64B7CC", "#FF3877"];
             break;
         case 2:
-            colors = ["#7215db", "#f0f8ff"];
+            colors = ["#5902EC", "#ffe4f4"];
             break;
         case 3:
-            colors = ["#196F3D", "#f0f8ff"];
+            colors = ["#159052", "#D0E4AE"];
             break;
         case 4:
-            colors = ["#B03A2E", "#f0f8ff"];
+            colors = ["#C0322E", "#ECEECE"];
             break;
         case 5:
-            colors = ["#141414", "#f0f8ff"];
+            colors = ["#141414", "#ffead1"];
             break;
         case 6:
-            colors = ["#f0f8ff", "#141414"];
+            colors = ["#ffffe8ee", "#141414"];
             break;
         default:
-            colors = ["#141414", "#f0f8ff"];
+            colors = ["#141414", "#ffead1"];
             break;                                   
     }
     
