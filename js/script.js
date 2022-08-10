@@ -8,6 +8,7 @@ const color3 = document.getElementsByClassName('btn3')[0];
 const color4 = document.getElementsByClassName('btn4')[0];
 const color5 = document.getElementsByClassName('btn5')[0];
 const color6 = document.getElementsByClassName('btn6')[0];
+const h2 = document.getElementsByClassName("main-title")[0];
 
 const getCats = async () => {
     const data = await fetch(baseURL)
@@ -26,16 +27,16 @@ function changeColor (color) {
     let colors = new Array(4);
     switch (color) {
         case 1:
-            colors = ["#64B7CC", "#FF3877"];
+            colors = ["#14213D", "#FCA311"];
             break;
         case 2:
-            colors = ["#5902EC", "#ffe4f4"];
+            colors = ["#4C2A85", "#DDFBD2"];
             break;
         case 3:
             colors = ["#159052", "#D0E4AE"];
             break;
         case 4:
-            colors = ["#C0322E", "#ECEECE"];
+            colors = ["#FF3877", "#64B7CC"];
             break;
         case 5:
             colors = ["#141414", "#ffead1"];
@@ -63,3 +64,10 @@ color5.addEventListener('click', () => changeColor(5));
 color6.addEventListener('click', () => changeColor(6));
 
 loadImg();
+
+const name = prompt("Digite seu nome:");
+if (!(name === null || name === "")) {
+    h2.innerHTML += `for ${name}&nbsp;`;
+} else {
+    h2.innerHTML += `for you&nbsp;`;
+}
